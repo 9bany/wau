@@ -30,6 +30,9 @@ func getCSRFToken() string {
 				}
 			}
 		}
+		if len(pattern) == 0 {
+			return ""
+		}
 		var index int = strings.Index(pattern, "=")
 		var token string = pattern[index+1 : len(pattern)-1]
 		return token

@@ -36,6 +36,9 @@ func getVSID() string {
 			}
 		}
 		var i int = strings.Index(pattern, ";")
+		if len(pattern) == 0 {
+			return ""
+		}
 		return pattern[16:i]
 	}
 	return ""
